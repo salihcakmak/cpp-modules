@@ -1,12 +1,19 @@
 ## Keywords
 
 - Namespace
+- Qualified Name
 - Class
 - Member Functions
 - Stdio streams
 - Inıtıalization List
 - Static
 - Const
+- Include guards
+- Attributes
+- CamelCase | UpperCamelCase
+- Orthodox Canonical Form
+- iomanip
+- string
 
 ---
 ### Namespace
@@ -21,6 +28,29 @@ namespace namespace_name {
     ...
 }
 ```
+namespace alanı içerisinde tanımlanan elemanlara dışarıdan erişmek içi :: çözünürlük işleci kullanılır. Çağırılan elemanları nitelikli yapar ve buna qualified name denir.  
+namespace de tanımlanan elemanları nitelendirmeden de doğrudan kullanmanmayı sağlayan tanımlamalar vardır. Bu tanımlama iki türlü olup Aşağıda gösterildiği gibidir.  
+```cpp
+using namespace namespace_name;
+
+using namespace::field_name;
+```
+Bu kullanımların farkı ilkinde namespace içerisinde bulunan tüm elamanların tanımlamalarını nitelendirmeden kullanılabilir hale getiriyorken ikincisinde sadece belirtilen elemanın tanımını getirmiştir.
+```cpp
+namespace product {
+    int x;
+    int y;
+}
+
+using product::x; // Bu bildirim şekli sadece x elemanını nitelendirdi. 
+
+using namespace product; // Burada product namespace'i içerisinde bulunan tüm tanımlamalar nitelendirildi.
+```
+---
+### Class
+
+---
+## Introduction
 
 C++, Bjarne Stroustrup tarafından C programlama dilinin bir uzantısı olarak veya "C with Classes" tarafından oluşturulan
 genel amaçlı bir programlama dilidir. Bu modüllerin amacı, sizi Nesne Yönelimli Programlama ile tanıştırmaktır. Bu, C++
