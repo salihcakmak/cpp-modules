@@ -2,11 +2,25 @@
 
 - Namespace
 - Class
-- Member function
+- Member Functions
 - Stdio streams
-- Initialization list
+- Inıtıalization List
 - Static
 - Const
+
+---
+### Namespace
+
+**namespace** yani isim alanı c++ dilinde global değişken tanımlama durumlarında ortaya çıkabilecek hataları önlemek için geliştirilmiştir.  
+**namespace'in** kendisi de bir global değişkendir fakat özelliği kapsama alanı içerisinde {} bulunan tanımlamaları diğer dosyalardan gizlemesidir.  
+Tanımlamalar **namespace'in** oluşturduğu kapsama alanında geçerli olur aynı zamanda global erişilebilirlik özelliklerini korurlar fakat bu tanımlamalara erişebilmek için namespace ismini kullanmalıyız.
+
+Namespace tanımlaması aşağıdaki gibidir:
+```cpp
+namespace namespace_name {
+    ...
+}
+```
 
 C++, Bjarne Stroustrup tarafından C programlama dilinin bir uzantısı olarak veya "C with Classes" tarafından oluşturulan
 genel amaçlı bir programlama dilidir. Bu modüllerin amacı, sizi Nesne Yönelimli Programlama ile tanıştırmaktır. Bu, C++
@@ -88,7 +102,7 @@ DAMNIT ! SORRY STUDENTS, I THOUGHT THIS THING WAS OFF.
 ```
 
 ```
-> $>./megaphone
+$>./megaphone
 * LOUD AND UNBEARABLE FEEDBACK NOISE *
 ```
 ```
@@ -130,6 +144,8 @@ Program başlangıcında, telefon defteri boştur ve kullanıcıdan üç komutta
     - phone number
     - darkest secret
   - Kaydedilmiş bir kişinin boş alanları olamaz.
+
+
 - **SEARCH:** özel bir contact bilgisini görüntüleyin.
   - Kaydedilen kişileri 4 sütunlu bir liste halinde görüntüleyin: dizin, ad, soyadı ve takma ad.
     - index
@@ -138,5 +154,43 @@ Program başlangıcında, telefon defteri boştur ve kullanıcıdan üç komutta
     - nickname
   - Her sütun 10 karakter genişliğinde olmalıdır. Bir pipe (çizgi) karakteri ('|') onları ayırır. Metin sağa hizalı olmalıdır. Metin sütundan uzunsa, kısaltılmalı ve görüntülenebilir son karakter bir nokta ('.') ile değiştirilmelidir.
   - Ardından, görüntülenecek içeriğin indexini kullanıcıdan tekrar isteyin. Dizin aralık dışında veya yanlışsa, ilgili bir davranış tanımlayın. Aksi takdirde, her satırda bir alan olacak şekilde kişi bilgilerini görüntüleyin.
+
+
 - **EXIT**
   - Program kapanır ve kişiler sonsuza kadar kaybolur!
+
+
+- **Diğer tüm girdiler atılır.**
+
+Bir komut doğru bir şekilde yürütüldüğünde, program bir başkasını bekler. Kullanıcı **EXIT** girdiğinde durur.
+
+Yürütülebilir dosyanıza ilgili bir ad verin.
+
+> http://www.cplusplus.com/reference/string/string/
+
+> http://www.cplusplus.com/reference/iomanip/
+
+## Exercise 02: The Job Of Your Dreams
+
+***
+```
+Turn-in directory   : ex02/
+Files to turn in    : Makefile, Account.cpp, Account.hpp, tests.cpp
+Forbidden functions : None
+```
+
+*Account.hpp, tests.cpp ve günlük dosyası modülün intranet sayfasından indirilebilir.*
+
+Bugün GlobalBanksters United'daki ilk gününüz. İşe alım testlerini başarıyla geçtikten sonra (bir arkadaşınızın size gösterdiği birkaç Microsoft Office hilesi sayesinde), geliştirme ekibine katıldınız. Ayrıca, Adobe Reader'ı ne kadar hızlı yüklediğinize işverenin şaşırdığını da biliyorsunuz. Bu küçük ekstra fark yarattı ve tüm rakiplerinizi (diğer bir deyişle diğer adayları) yenmenize yardımcı oldu: başardınız!
+
+Her neyse, müdürünüz size biraz iş verdi. İlk göreviniz kayıp bir dosyayı yeniden oluşturmaktır. Bir şeyler ters gitti ve bir kaynak dosya yanlışlıkla silindi. Ne yazık ki meslektaşlarınız Git'in ne olduğunu bilmiyor ve kodu paylaşmak için USB anahtarlarını kullanıyor. Bu noktada, burayı hemen terk etmek mantıklı olacaktır. Ancak kalmaya karar verirsiniz. Meydan okuma kabul edilmiştir!
+
+Diğer geliştiricileriniz size bir sürü dosya veriyor. tests.cpp'nin derlenmesi, eksik dosyanın Account.cpp olduğunu ortaya çıkarır. Şanslısınız, Account.hpp header dosyası kaydedilmiş. Ayrıca bir log(günlük) dosyası var. Belki **Account** sınıfının nasıl uygulandığını(implement edildiğini) anlamak için kullanabilirsiniz.
+
+Account.cpp dosyasını yeniden oluşturmaya başlarsınız. Sadece birkaç dakika içinde birkaç satırlık saf harika C++ kodlarsınız. Birkaç başarısız derlemeden sonra programınız testleri geçer. Çıktısı, günlük dosyasına kaydedilenle mükemmel şekilde eşleşir. (Günlük dosyasına kaydedilen testler işe alınmadan önce çalıştırıldığı için açıkça farklı olacak zaman damgaları dışında.)
+
+Kahretsin, etkileyicisin!
+
+*Yıkıcıların(destructors) çağrılma sırası, derleyicinize/işletim sisteminize bağlı olarak değişebilir. Yani yıkıcılarınız(destructors) ters sırada çağrılabilir.*
+
+*Bu modülü egzersiz 02 yapmadan geçebilirsiniz.*
