@@ -13,7 +13,17 @@
 - CamelCase | UpperCamelCase
 - Orthodox Canonical Form
 - iomanip
+- iostream
+- using
+- std
 - string
+- cout
+- endl
+- toupper()
+- <<
+- cin()
+- getline()
+- 
 
 ---
 ### Namespace
@@ -48,6 +58,12 @@ using namespace product; // Burada product namespace'i içerisinde bulunan tüm 
 ```
 ---
 ### Class
+
+---
+### Member Functions
+
+---
+### Stdio Streams
 
 ---
 ## Introduction
