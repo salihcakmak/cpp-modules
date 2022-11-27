@@ -5,5 +5,9 @@ using std::cout;
 using std::endl;
 
 PhoneBook::PhoneBook() {
-    cout << "Constructor method executed" << endl;
+    cout << "PhoneBook Constructor method executed" << endl;
+}
+
+PhoneBook::~PhoneBook() {
+    cout << "PhoneBook Destructor method executed" << endl;
 }

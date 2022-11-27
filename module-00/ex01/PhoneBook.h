@@ -1,6 +1,8 @@
 #ifndef _PHONEBOOK_H_
 #define _PHONEBOOK_H_
 
+#include "Contact.h"
+
 class PhoneBook{
 public:
     PhoneBook();
