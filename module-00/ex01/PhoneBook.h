@@ -6,9 +6,13 @@
 class PhoneBook{
 public:
     PhoneBook();
-    ~PhoneBook();
+    void addContact(Contact contact);
+    void showContacts();
+    void showContactById(int index);
 private:
     Contact _contacts[8];
+    int _index;
+    void formatString(string str);
 };
 
 #endif
