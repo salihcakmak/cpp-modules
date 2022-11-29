@@ -1,26 +1,26 @@
 #include "MessageAndColor.h"
 
 MessageAndColor::MessageAndColor() {
-    this->_resetColor = "\033[0m";
-    this->_redColor = "\033[1;31m";
-    this->_greenColor = "\033[1;32m";
-    this->_magentaColor = "\033[1;35m";
+    _resetColor = "\033[0m";
+    _redColor = "\033[1;31m";
+    _greenColor = "\033[1;32m";
+    _magentaColor = "\033[1;35m";
 }
 
 string MessageAndColor::getResetColor() {
-    return this->_resetColor;
+    return _resetColor;
 }
 
 string MessageAndColor::getRedColor() {
-    return this->_redColor;
+    return _redColor;
 }
 
 string MessageAndColor::getGreenColor() {
-    return this->_greenColor;
+    return _greenColor;
 }
 
 string MessageAndColor::getMagentaColor() {
-    return this->_magentaColor;
+    return _magentaColor;
 }
 
 void MessageAndColor::guidelineMessage() {

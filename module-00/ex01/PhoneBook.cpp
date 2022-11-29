@@ -1,13 +1,6 @@
 #include "PhoneBook.h"
-#include "iostream"
-#include "iomanip"
 
-using std::cout;
-using std::endl;
-
-PhoneBook::PhoneBook() : _index(0) {
-
-}
+PhoneBook::PhoneBook() : _index(0) {}
 
 void PhoneBook::addContact(Contact contact) {
     if (contact.getFirstname().empty() || contact.getLastName().empty() || contact.getNickName().empty() ||
@@ -25,7 +18,6 @@ void PhoneBook::addContact(Contact contact) {
     }
 }
 
-
 void PhoneBook::formatString(std::string str) {
     if (str.length() >= 10)
         cout << str.substr(0, 9) + "." << "|";
@@ -37,7 +29,7 @@ void PhoneBook::showContacts() {
     for (int i = 0; i < 8; ++i) {
         if (_contacts[i].getIsEmpty())
             break;
-        cout << std::setw(10) << i << " | ";
+        cout << std::setw(10) << i + 1 << " | ";
         formatString(_contacts[i].getFirstname());
         formatString(_contacts[i].getLastName());
         formatString(_contacts[i].getNickName());
@@ -46,13 +38,12 @@ void PhoneBook::showContacts() {
 }
 
 void PhoneBook::showContactById(int index) {
-    if (_contacts[index].getIsEmpty())
+    if (_contacts[index - 1].getIsEmpty())
         cout << "Wrong index value" << endl;
     else {
         cout << "Index :" << index << endl;
-        cout << "First Name : " << _contacts[index].getFirstname() << endl;
-        cout << "Last Name : " <<_contacts[index].getLastName() << endl;
-        cout << "Nick Name : " <<_contacts[index].getNickName() << endl;
-
+        cout << "First Name : " << _contacts[index - 1].getFirstname() << endl;
+        cout << "Last Name : " <<_contacts[index - 1].getLastName() << endl;
+        cout << "Nick Name : " <<_contacts[index - 1].getNickName() << endl;
     }
 }

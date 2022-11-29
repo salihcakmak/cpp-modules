@@ -48,8 +48,10 @@ int main(void) {
             phoneBook.showContacts();
             cout << "Enter Index : ";
             getline(cin, command);
-            if (command.length() == 1 && (command[0] >= '0' && command[0] <= '9'))
+            if (command.length() == 1 && (command[0] >= '1' && command[0] <= '9'))
                 phoneBook.showContactById(std::stoi(command));
+            else
+                cout << "Undefined variable input. Please use 1 - 8" << endl;
         } else if (command == "EXIT") {
             cout << "PhoneBook is closing" << endl;
             break;

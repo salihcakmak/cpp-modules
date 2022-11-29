@@ -7,7 +7,6 @@
 //                                                                            //
 // ************************************************************************** //
 
-
 #pragma once
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
@@ -18,11 +17,8 @@
 
 class Account {
 
-
 public:
-
     typedef Account		t;
-
     static int	getNbAccounts( void );
     static int	getTotalAmount( void );
     static int	getNbDeposits( void );
@@ -36,7 +32,6 @@ public:
     bool	makeWithdrawal( int withdrawal );
     int		checkAmount( void ) const;
     void	displayStatus( void ) const;
-
 
 private:
 
@@ -53,10 +48,7 @@ private:
     int				_nbWithdrawals;
 
     Account( void );
-
 };
-
-
 
 // ************************************************************************** //
 // vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
@@ -64,6 +56,5 @@ private:
 // -*- mode: c++-mode;                                                       -*-
 // -*- fill-column: 75; comment-column: 75;                                  -*-
 // ************************************************************************** //
-
 
 #endif /* __ACCOUNT_H__ */

@@ -217,7 +217,7 @@ Yürütülebilir dosyanıza ilgili bir ad verin.
 > http://www.cplusplus.com/reference/iomanip/
 
 ## Exercise 02: The Job Of Your Dreams
-
+  
 ***
 ```
 Turn-in directory   : ex02/

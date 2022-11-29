@@ -2,6 +2,9 @@
 #define _PHONEBOOK_H_
 
 #include "Contact.h"
+#include "iomanip"
+using std::cout;
+using std::endl;
 
 class PhoneBook{
 public:

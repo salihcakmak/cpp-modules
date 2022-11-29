@@ -11,18 +11,17 @@ class Contact {
 public:
     Contact();
     string getFirstname();
-    void setFirstname(string firstName);
     string getLastName();
-    void setLastName(string lastName);
     string getNickName();
-    void setNickName(string nickName);
     string getPhoneNumber();
-    void setPhoneNumber(string phoneNumber);
     string getDarkestSecret();
-    void setDarkestSecret(string darkestSecret);
     bool getIsEmpty();
     void setIsEmpty(bool isEmpty);
-
+    void setFirstname(string firstName);
+    void setLastName(string lastName);
+    void setNickName(string nickName);
+    void setPhoneNumber(string phoneNumber);
+    void setDarkestSecret(string darkestSecret);
 
 private:
     string _firstName;
@@ -31,7 +30,6 @@ private:
     string _phoneNumber;
     string _darkestSecret;
     bool _isEmpty;
-
 };
 
 #endif
