@@ -43,7 +43,9 @@ void PhoneBook::showContactById(int index) {
     else {
         cout << "Index :" << index << endl;
         cout << "First Name : " << _contacts[index - 1].getFirstname() << endl;
-        cout << "Last Name : " <<_contacts[index - 1].getLastName() << endl;
-        cout << "Nick Name : " <<_contacts[index - 1].getNickName() << endl;
+        cout << "Last Name : " << _contacts[index - 1].getLastName() << endl;
+        cout << "Nick Name : " << _contacts[index - 1].getNickName() << endl;
+        cout << "Phone : " << _contacts[index - 1].getPhoneNumber() << endl;
+        cout << "Darkest Secret : " << _contacts[index - 1].getDarkestSecret() << endl;
     }
 }
