@@ -1,4 +1,3 @@
-
 #ifndef _ZOMBIE_H_
 #define _ZOMBIE_H_
 
@@ -12,6 +11,7 @@ class Zombie {
 public:
     void announce(void );
     Zombie* zombieHorde( int N, std::string name );
+
 private:
     string name;
 };

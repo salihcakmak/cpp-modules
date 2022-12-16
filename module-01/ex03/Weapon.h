@@ -13,6 +13,7 @@ public:
     Weapon(string type);
     const string& getType();
     void setType(string type);
+
 private:
     string _type;
 };

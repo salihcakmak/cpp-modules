@@ -12,6 +12,7 @@ class HumanA {
 public:
     HumanA(string name, Weapon &weapon);
     void attack();
+
 private:
     Weapon *_weapon;
     string _name;

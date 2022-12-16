@@ -9,13 +9,9 @@ using std::string;
 
 class Harl {
 public:
-    Harl();
     void complain( std::string level );
 
 private:
-    string _levels[4];
-    void (Harl::*fn[4])();
-
     void debug();
     void info();
     void warning();
