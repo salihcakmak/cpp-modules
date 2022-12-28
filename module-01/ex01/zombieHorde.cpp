@@ -1,14 +1,13 @@
 #include "Zombie.h"
 
-Zombie* Zombie::zombieHorde( int N, std::string name )
-{
+Zombie* zombieHorde( int N, std::string name ){
     if (N < 0)
         return NULL;
 
     Zombie *zombies = new Zombie[N];
 
     for (int i = 0; i < N; ++i) {
-        zombies[i].name = name;
+        zombies[i].setName(name);
     }
     return &zombies[0];
 }

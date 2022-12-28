@@ -7,16 +7,19 @@ using std::cout;
 using std::endl;
 using std::string;
 
-
 class Zombie {
 public:
-void announce(void );
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+    Zombie();
+    Zombie(string name);
+    ~Zombie();
+    void announce(void);
+    void setName(string name);
 
 private:
-    string name;
+    string _name;
 };
 
+Zombie* newZombie(string name);
+void randomChump(string name);
 
 #endif

@@ -2,10 +2,9 @@
 
 int main()
 {
-    Zombie zombie;
-    zombie.randomChump("Fatih");
-    Zombie *nz = zombie.newZombie("Abdülselam");
+    Zombie *zombie = newZombie("MasterClass");
+    zombie->announce();
 
-    nz->announce();
-    delete nz;
+    randomChump("Kuttapp");
+    delete zombie;
 }

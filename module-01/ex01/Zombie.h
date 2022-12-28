@@ -9,12 +9,15 @@ using std::string;
 
 class Zombie {
 public:
-    void announce(void );
-    Zombie* zombieHorde( int N, std::string name );
+    Zombie();
+    ~Zombie();
+    void setName(string name);
+    void announce(void);
 
 private:
-    string name;
+    string _name;
 };
 
+Zombie* zombieHorde( int N, std::string name );
 
 #endif

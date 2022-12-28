@@ -1,8 +1,21 @@
 #include "Zombie.h"
 
+Zombie::Zombie() {
+    _name = "Default";
+    cout << "Default Constructor" << endl;
+}
+
+Zombie::~Zombie() {
+    cout << "Default Destructor" << endl;
+}
+
+void Zombie::setName(std::string name) {
+    _name = name;
+}
+
 void Zombie::announce() {
-    if (name.empty())
+    if (_name.empty())
         cout << "Sory I dont write this name because is empty!!!" << endl;
     else
-        cout << name << ": BraiiiiiiinnnzzzZ..." << endl;
+        cout << _name << ": BraiiiiiiinnnzzzZ..." << endl;
 }
