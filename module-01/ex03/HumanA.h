@@ -14,7 +14,7 @@ public:
     void attack();
 
 private:
-    Weapon *_weapon;
+    Weapon &_weapon;
     string _name;
 };
 

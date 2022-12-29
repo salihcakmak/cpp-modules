@@ -23,7 +23,8 @@ int main()
         Weapon axe = Weapon("Blade Axe");
         jim.setWeapon(axe);
         jim.attack();
-        system("Leaks violence");
     }
+    system("Leaks violence");
+
     return 0;
 }
