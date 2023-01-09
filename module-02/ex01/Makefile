@@ -1,4 +1,4 @@
-NAME	= ocf
+NAME	= fixedpoint
 CC		= c++
 FLAGS	= -Wall -Werror -Wextra -std=c++98
 SRCS	= main.cpp Fixed.cpp

@@ -24,10 +24,33 @@ Fixed::~Fixed() {
 }
 
 int Fixed::getRawBits() const {
-    cout << "getRawBits member function called" << endl;
     return _raw;
 }
 
 void Fixed::setRawBits(int raw) {
     _raw = raw;
+}
+
+Fixed::Fixed(const int fixedNumber) {
+    this->_raw = fixedNumber * 256.0;
+    cout << "Int constructor called" << endl;
+}
+
+Fixed::Fixed(const float fixedNumber) {
+    this->_raw = roundf(fixedNumber * 256.0f);
+    cout << "Float constructor called" << endl;
+}
+
+int Fixed::toInt() const {
+    return this->_raw / 256;
+}
+
+float Fixed::toFloat() const {
+    return this->_raw / 256.0f;
+}
+
+std::ostream &operator<<(std::ostream& out, Fixed const &value)
+{
+    out << value.toFloat();
+    return out;
 }
