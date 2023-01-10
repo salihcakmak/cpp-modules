@@ -28,8 +28,29 @@ public:
     int toInt(void) const;
 
     //ex02
-    //comparison operators
-    bool operator>(Fixed )
+    //operators
+    bool operator>(Fixed const &other);
+	bool operator<(Fixed const &other);
+	bool operator>=(Fixed const &other);
+	bool operator<=(Fixed const &other);
+	bool operator==(Fixed const &other);
+	bool operator!=(Fixed const &other);
+
+
+	Fixed operator+(Fixed const &other);
+	Fixed operator-(Fixed const &other);
+	Fixed operator*(Fixed const &other);
+	Fixed operator/(Fixed const &other);
+
+	Fixed operator++();
+	Fixed operator--();
+	Fixed operator++(int);
+	Fixed operator--(int);
+
+	static Fixed& min(Fixed& fixedA, Fixed& fixedB);
+	static const Fixed& min(Fixed const &fixedA, Fixed const &fixedB);
+	static Fixed& max(Fixed& fixedA, Fixed& fixedB);
+	static const Fixed& max(Fixed const &fixedA, Fixed const &fixedB);
 
 };
 
