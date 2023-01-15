@@ -1,4 +1,3 @@
-
 #ifndef _SCAVTRAP_H_
 #define _SCAVTRAP_H_
 

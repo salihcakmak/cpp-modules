@@ -14,7 +14,6 @@ private:
 	int _energyPoints;
 	int _attackDamage;
 
-
 public:
 	ClapTrap();
 	ClapTrap(string name);
@@ -27,6 +26,5 @@ public:
 	void beRepaired(unsigned int amount);
 
 };
-
 
 #endif

@@ -27,7 +27,6 @@ ClapTrap::~ClapTrap() {
 	cout << "ClapTrap Destructor called" << endl;
 }
 
-
 void ClapTrap::attack(const string& target) {
 	if(this->_energyPoints > 0 && this->_hitPoints > 0){
 		cout << "Claptrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << endl;
@@ -36,7 +35,6 @@ void ClapTrap::attack(const string& target) {
 	else
 		cout << "Claptrap " << this->_name << " has no " << (!this->_energyPoints ? "energy" : "hit points") << " left!" << endl;
 }
-
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	if(this->_hitPoints > 0){
