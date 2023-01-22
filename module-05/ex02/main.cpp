@@ -1,50 +1,30 @@
-#include "Bureaucrat.h"
-#include "Form.h"
+#include "AForm.h"
+#include "PresidentialPardonForm.h"
+#include "RobotomyRequestForm.h"
+#include "ShrubberyCreationForm.h"
 
 int main()
 {
-	try {
-		Bureaucrat bureaucrat("Salih Çakmak", 5);
-	}
-	catch (std::exception &e){
-		cout << e.what() << endl;
-	}
-
-	try {
-		Bureaucrat bureaucrat("Salih Çakmak", 0);
-	}
-	catch (std::exception &e){
-		cout << e.what() << endl;
-	}
-
-
-	try {
-		Bureaucrat bureaucrat("Salih Çakmak", 151);
-	}
-	catch (std::exception &e){
-		cout << e.what() << endl;
-	}
-
-
-	try {
-		Bureaucrat bureaucrat("Salih Çakmak", 5);
-		Form form("Teknik Şartname", 10, 3);
-
-		bureaucrat.signForm(form);
-	}
-	catch (std::exception &e){
-		cout << e.what() << endl;
-	}
-
-
-	try {
-		Bureaucrat bureaucrat("Salih Çakmak", 12);
-		Form form("Teknik Şartname", 10, 3);
-
-		bureaucrat.signForm(form);
-	}
-	catch (std::exception &e){
-		cout << e.what() << endl;
-	}
+	AForm *form = new PresidentialPardonForm("presidental_test");
+	Bureaucrat *bureaucrat = new Bureaucrat("salih", 1);
+	bureaucrat->signForm(*form);
+	bureaucrat->executeForm(*form);
+	Bureaucrat *bureaucrat2 = new Bureaucrat("fatih", 140);
+	AForm *form2 = new RobotomyRequestForm("imrobbott");
+	bureaucrat2->signForm(*form2);
+	bureaucrat->signForm(*form2);
+	bureaucrat2->executeForm(*form2);
+	bureaucrat->executeForm(*form2);
+	bureaucrat->signForm(*form2);
+	Bureaucrat *bureaucrat3 = new Bureaucrat("ali", 2);
+	AForm *form3 = new ShrubberyCreationForm("tree");
+	bureaucrat3->signForm(*form3);
+	bureaucrat3->executeForm(*form3);
+	delete bureaucrat3;
+	delete form3;
+	delete form2;
+	delete bureaucrat2;
+	delete bureaucrat;
+	delete form;
 	return 0;
 }

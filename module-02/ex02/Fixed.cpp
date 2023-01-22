@@ -44,6 +44,8 @@ int Fixed::toInt() const {
 }
 
 float Fixed::toFloat() const {
+	cout << "geldi" << this->_raw << endl;
+	cout << "bunu dönecek" << this->_raw / 256.0f << endl;
 	return this->_raw / 256.0f;
 }
 
@@ -122,6 +124,7 @@ Fixed Fixed::operator/(const Fixed &other) {
 
 Fixed Fixed::operator++() {
 	this->_raw++;
+	cout << "Burası operator cağrılınca oldu." << this->_raw << endl;
 	return *this;
 }
 
